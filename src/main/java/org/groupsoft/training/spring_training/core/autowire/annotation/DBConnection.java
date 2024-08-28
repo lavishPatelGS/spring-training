@@ -1,12 +1,13 @@
 package org.groupsoft.training.spring_training.core.autowire.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class DBConnection {
 
 	@Autowired
+	@Qualifier("host2")
 	private Host host;
-
 	public DBConnection() {
 		super();
 		System.out.println("Super Constructor");

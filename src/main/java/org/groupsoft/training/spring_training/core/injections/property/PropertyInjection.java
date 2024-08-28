@@ -12,6 +12,7 @@ public class PropertyInjection {
 		ApplicationContext context = new ClassPathXmlApplicationContext(BEAN_FILE_PATH);
 		Employee emp1 = context.getBean("emp1", Employee.class);
 		System.out.println(emp1);
+		System.out.println(emp1.getPhone().getClass().getName());
 	}
 
 }

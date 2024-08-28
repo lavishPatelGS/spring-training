@@ -2,6 +2,7 @@ package org.groupsoft.training.spring_training.core.injections.property;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 public class Employee {
@@ -9,7 +10,7 @@ public class Employee {
 	private List<String> phone;
 	private Set<String> address;
 	private Map<String, String> courses;
-	private Map<String, String> connection;
+	private Properties connection;
 	private Department department;
 
 	public Employee() {
@@ -18,7 +19,7 @@ public class Employee {
 	}
 
 	public Employee(String name, List<String> phone, Set<String> address, Map<String, String> courses,
-			Map<String, String> connection, Department department) {
+			Properties connection, Department department) {
 		super();
 		this.name = name;
 		this.phone = phone;
@@ -60,11 +61,11 @@ public class Employee {
 		this.courses = courses;
 	}
 
-	public Map<String, String> getConnection() {
+	public Properties getConnection() {
 		return connection;
 	}
 
-	public void setConnection(Map<String, String> connection) {
+	public void setConnection(Properties connection) {
 		this.connection = connection;
 	}
 

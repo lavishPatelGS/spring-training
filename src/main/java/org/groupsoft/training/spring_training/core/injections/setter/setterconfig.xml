@@ -6,12 +6,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 						https://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean class="org.groupsoft.training.spring_training.core.injections.setter.Student" id="student1">
+	<bean class="org.groupsoft.training.spring_training.core.injections.setter.Student" id="student1" scope="prototype">
 		<property name="studentId" value="1" />
 		<property name="studentName" value="One" />
 		<property name="studentAddress" value="Indore" />
 	</bean>
-	<bean class="org.groupsoft.training.spring_training.core.injections.setter.Student" id="student2">
+	<bean class="org.groupsoft.training.spring_training.core.injections.setter.Student" id="student2" scope="singleton">
 		<property name="studentId" value="2" />
 		<property name="studentName" value="Two" />
 		<property name="studentAddress" value="Delhi" />
