@@ -2,6 +2,7 @@ package org.groupsoft.training.spring_training.jdbc.crud.student;
 
 import org.groupsoft.training.spring_training.jdbc.crud.student.dao.StudentDao;
 import org.groupsoft.training.spring_training.jdbc.crud.student.dao.StudentDaoImpl;
+import org.springframework.beans.factory.config.PropertiesFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -24,6 +25,8 @@ public class JdbcConfig {
 
 		return ds;
 	}
+	
+	
 
 	@Bean(name = {"jdbcTemplate"})
 	public JdbcTemplate getJdbcTemplate() {
