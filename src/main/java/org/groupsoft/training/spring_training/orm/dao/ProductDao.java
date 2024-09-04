@@ -1,36 +1,36 @@
 package org.groupsoft.training.spring_training.orm.dao;
 
+import javax.transaction.Transactional;
+
 import org.groupsoft.training.spring_training.orm.Product;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
-import jakarta.transaction.Transactional;
-
 public class ProductDao {
 
-	private HibernateTemplate ht;
+	private HibernateTemplate hibernateTemplate;
 
 	public ProductDao() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ProductDao(HibernateTemplate ht) {
+	public ProductDao(HibernateTemplate hibernateTemplate) {
 		super();
-		this.ht = ht;
+		this.hibernateTemplate = hibernateTemplate;
 	}
 
 	@Transactional
 	public int insert(Product product) {
-		Integer i = (Integer) this.ht.save(product);
+		Integer i = (Integer) this.hibernateTemplate.save(product);
 		return i;
 	}
 
-	public HibernateTemplate getHt() {
-		return ht;
+	public HibernateTemplate getHibernateTemplate() {
+		return hibernateTemplate;
 	}
 
-	public void setHt(HibernateTemplate ht) {
-		this.ht = ht;
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
 	}
 
 }
